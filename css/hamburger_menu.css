@@ -1,0 +1,155 @@
+*{box-sizing: border-box; margin: 0; padding: 0;}
+
+@font-face {
+    font-family: "Police Projet";
+    font-weight: 400;
+    src: url(../fonts/FreeSans.ttf) format("truetype");
+}
+
+
+
+/** Hamburger menu **/
+
+.hamburger_menu_wrap{
+    display: none;
+    position: absolute;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 70px;
+    height: inherit;
+}
+@media screen and (max-width: 768px){
+    .hamburger_menu_wrap{display: block;}
+}
+
+.hamburger_menu_wrap .hamburger_toggler{
+    position: absolute;
+    z-index: 2;
+    cursor: pointer;
+    width: 70px;
+    height: 10vh;
+    opacity: 0;
+}
+
+.hamburger_menu_wrap .hamburger{
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    width: 70px;
+    height: 10vh;
+    background-color: white;
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+}
+
+.hamburger_menu_wrap .hamburger > div{
+    position: relative;
+    width: 100%;
+    height: 2px;
+    background-color: black;
+    transition: ease 400ms;
+}
+
+.hamburger_menu_wrap .hamburger > div:before, .hamburger_menu_wrap .hamburger > div:after{
+    content: '';
+    background-color: inherit;
+    position: absolute;
+    z-index: 1;
+    top: -10px;
+    width: 100%;
+    height: 2px;
+}
+
+.hamburger_menu_wrap .hamburger > div:after{
+    top: 10px;
+}
+
+/* Toggler Animate */
+
+.hamburger_menu_wrap .hamburger_toggler:checked + .hamburger > div{
+    transform: rotate(135deg);
+}
+
+.hamburger_menu_wrap .hamburger_toggler:checked + .hamburger > div:before, .hamburger_menu_wrap .hamburger_toggler:checked + .hamburger > div:after{
+    top: 0;
+    transform: rotate(90deg);
+}
+
+/* Menu from hamburger */
+
+.hamburger_menu_wrap .hamburger_menu{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    visibility: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.hamburger_menu_wrap .hamburger_menu > div{
+    background-color: rgba(0, 0, 0, .7);
+    border-radius: 50%;
+    width: 200vw;
+    height: 300vh;
+    display: flex;
+    flex:none;
+    align-items: center;
+    justify-content: center;
+    transform: scale(0);
+    transition: all 400ms ease;
+}
+
+.hamburger_menu_wrap .hamburger_menu > div > div{
+    text-align: center;
+    max-width: 90vw;
+    max-height: 100vh;
+    opacity: 0;
+    transition: opacity 400ms ease;
+}
+
+.hamburger_menu_wrap .hamburger_menu li{
+    list-style: none;
+    color: white;
+    font-family: "Police Projet";
+    font-weight: 400;
+    font-size: 2rem;
+    padding: 1rem;
+}
+
+.hamburger_menu_wrap .hamburger_menu a{
+    color: inherit;
+    text-decoration: 0;
+    transition: color 400ms ease;
+}
+
+.hamburger_menu_wrap .hamburger_menu a:hover{
+    color: grey;
+    text-shadow:
+		-1px -1px 0 #fff,
+		1px -1px 0 #fff,
+		-1px 1px 0 #fff,
+		1px 1px 0 #fff;
+}
+
+/* show menu */
+
+.hamburger_menu_wrap .hamburger_toggler:checked ~ .hamburger_menu{
+    visibility: visible;
+}
+
+.hamburger_menu_wrap .hamburger_toggler:checked ~ .hamburger_menu > div{
+    transform: scale(1);
+    transition-duration: 1s;
+}
+
+.hamburger_menu_wrap .hamburger_toggler:checked ~ .hamburger_menu > div > div{
+    opacity: 1;
+    transition: opacity 400ms ease;
+}
