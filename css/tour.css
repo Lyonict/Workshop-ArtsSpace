@@ -91,10 +91,17 @@ p{font-family: "Police Projet"; font-weight: 300;}
     justify-content: center;
     align-items: center;
     text-align: center;}
-.background-img-header hr{
-    width: 30%;
-    border: 3px solid white;
-    opacity: 100%;}
+.background-img-header h1::before{
+    content: "";
+    height: 5px;
+    width: 50%;
+    background-color: white;
+    display: block;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    margin: 2rem 0;
+}
 .background-img-header h1{
     font-size: clamp(2rem, 1rem + 5vw, 5rem);
     margin: 1rem 2rem;}
@@ -198,10 +205,19 @@ p{font-family: "Police Projet"; font-weight: 300;}
     justify-content: center;
     align-items: center;
 }
-.presentation-text-container hr{
-    width: 30%;
-    border: 1px solid black;
-    margin: 10px 0 20px;}
+
+.presentation-text-container h2::after{
+    content: "";
+    display: block;
+    width: 65%;
+    height: 2px;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgb(24, 24, 24);
+    margin: 5px 0 15px;
+}
+
 .presentation-text-container p{margin: 0 0 20px;}
 
 .presentation-caroussel-container{
@@ -225,9 +241,17 @@ p{font-family: "Police Projet"; font-weight: 300;}
     text-align: center;
     background-color: rgb(245, 245, 245);}
 
-#quick_overview hr{width: 25%; 
-    border: solid 1px black; 
-    margin: 10px auto 20px;}
+#quick_overview h2::after{
+    content: "";
+    display: block;
+    width: 35%;
+    height: 2px;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: rgb(24, 24, 24);
+    margin: 5px 0 15px;
+}
 
 #quick_overview img{height: auto; width: 100%; margin-bottom: -4px;}
 
@@ -236,6 +260,16 @@ p{font-family: "Police Projet"; font-weight: 300;}
 #layout_engine{
     padding: 5% 10%; 
     border-top: 1px solid lightgray;}
+
+#layout_engine h2::after{
+    content: "";
+    display: block;
+    width: 35%;
+    height: 2px;
+    position: relative;
+    background-color: rgb(24, 24, 24);
+    margin: 5px 0 15px;
+}
 
 #layout_engine hr{width: 25%; 
     border: solid 1px black; 
@@ -251,9 +285,15 @@ p{font-family: "Police Projet"; font-weight: 300;}
     border-top: 1px solid lightgray;
     background-color: rgb(245, 245, 245);}
 
-#gallery_tools hr{width: 25%; 
-    border: solid 1px black; 
-    margin: 10px 0 20px;}
+#gallery_tools h2::after{
+    content: "";
+    display: block;
+    width: 35%;
+    height: 2px;
+    position: relative;
+    background-color: rgb(24, 24, 24);
+    margin: 5px 0 15px;
+}
 
 #gallery_tools p{margin: 0 0 20px;}
 
@@ -265,9 +305,15 @@ p{font-family: "Police Projet"; font-weight: 300;}
     padding: 5% 10%; 
     border-top: 1px solid lightgray;}
 
-#blogging hr{width: 25%; 
-    border: solid 1px black; 
-    margin: 10px 0 20px;}
+#blogging h2::after{
+    content: "";
+    display: block;
+    width: 30%;
+    height: 2px;
+    position: relative;
+    background-color: rgb(24, 24, 24);
+    margin: 5px 0 15px;
+}
 
 #blogging p{margin: 0 0 20px;}
 
@@ -306,9 +352,15 @@ p{font-family: "Police Projet"; font-weight: 300;}
     border-top: 1px solid lightgray;
     background-color: rgb(245, 245, 245);}
 
-#custom_look hr{width: 25%; 
-    border: solid 1px black; 
-    margin: 10px 0 20px;}
+#custom_look h2::after{
+    content: "";
+    display: block;
+    width: 30%;
+    height: 2px;
+    position: relative;
+    background-color: rgb(24, 24, 24);
+    margin: 5px 0 15px;
+}
 
 #custom_look p{margin: 0 0 20px;}
 
@@ -326,7 +378,16 @@ p{font-family: "Police Projet"; font-weight: 300;}
 }
 
 .mobile_design_text{width: 40%; order: 1;}
-.mobile_design_text hr{width: 50%; border: 1px solid black; margin: 10px 0 20px;}
+.mobile_design_text h2{font-family: "Police Projet"; font-weight: 400;font-size: clamp(1rem, 1rem + 2vw, 1.5rem)}
+.mobile_design_text h2::after{
+    content: "";
+    display: block;
+    width: 55%;
+    height: 2px;
+    position: relative;
+    background-color: rgb(24, 24, 24);
+    margin: 5px 0 15px;
+}
 .mobile_design_text p{margin-bottom: 20px;}
 .mobile_design_img{width: 60%; height: auto; order: 2;}
 @media screen and (max-width: 768px) {
@@ -340,11 +401,17 @@ p{font-family: "Police Projet"; font-weight: 300;}
     padding: 5% 10%;
     border-top: 1px solid lightgray;
     background-color: rgb(245, 245, 245);}
-#connectivity > div hr{
-    width: 35%; 
-    border: solid 1px black; 
-    margin: 10px 0 20px;
+
+#connectivity h2::after{
+    content: "";
+    display: block;
+    width: 30%;
+    height: 2px;
+    position: relative;
+    background-color: rgb(24, 24, 24);
+    margin: 5px 0 15px;
 }
+
 
 .connectivity_grid{
     display: grid;
@@ -396,10 +463,15 @@ p{font-family: "Police Projet"; font-weight: 300;}
 
 #commenting img{height: auto; width: 100%;}
 
-#commenting hr{
-    width: 60%; 
-    border: solid 1px black; 
-    margin: 10px 0 20px;
+#commenting h2{font-family: "Police Projet"; font-weight: 400;font-size: clamp(1rem, 1rem + 2vw, 1.5rem)}
+#commenting h2::after{
+    content: "";
+    display: block;
+    width: 60%;
+    height: 2px;
+    position: relative;
+    background-color: rgb(24, 24, 24);
+    margin: 5px 0 15px;
 }
 
 /********** STATISTICS **********/
@@ -409,9 +481,16 @@ p{font-family: "Police Projet"; font-weight: 300;}
     border-top: 1px solid lightgray;
     background-color: rgb(245, 245, 245);}
 
-#statistics hr{width: 25%; 
-    border: solid 1px black; 
-    margin: 10px 0 20px;}
+#statistics h2::after{
+    content: "";
+    display: block;
+    width: 40%;
+    height: 2px;
+    position: relative;
+    background-color: rgb(24, 24, 24);
+    margin: 5px 0 15px;
+}
+
 #statistics p{margin: 0 0 20px;}
 
 #statistics img{height: auto; width: 100%;}
@@ -431,7 +510,17 @@ p{font-family: "Police Projet"; font-weight: 300;}
 @media screen and (max-width: 768px) {
     .search_divs{width: 100%;}
 }
-.search_divs hr{width: 50%; border: solid 1px black; margin: 10px 0 20px;}
+
+.search_divs h2{font-family: "Police Projet"; font-weight: 400;font-size: clamp(1rem, 1rem + 2vw, 1.5rem)}
+.search_divs h2::after{
+    content: "";
+    display: block;
+    width: 60%;
+    height: 2px;
+    position: relative;
+    background-color: rgb(24, 24, 24);
+    margin: 5px 0 15px;
+}
 .search_divs > img{height: auto; width: 100%;}
 
 .CEO_profile{
@@ -462,7 +551,18 @@ p{font-family: "Police Projet"; font-weight: 300;}
 @media screen and (max-width: 768px) {
     #cloud_domain div{width: 100%;}
 }
-#cloud_domain div hr{width: 50%; border: solid 1px black; margin: 10px 0 20px;}
+
+#cloud_domain h2{font-family: "Police Projet"; font-weight: 400;font-size: clamp(1rem, 1rem + 2vw, 1.5rem)}
+#cloud_domain h2::after{
+    content: "";
+    display: block;
+    width: 60%;
+    height: 2px;
+    position: relative;
+    background-color: rgb(24, 24, 24);
+    margin: 5px 0 15px;
+}
+
 #cloud_domain img{height: auto; width: 100%;}
 
 .free_div{
